@@ -1,6 +1,7 @@
 Requirements:
 
 sudo apt-get install fswebcam git pip
+
 pip install urllib2
 
 Download gdrive app
