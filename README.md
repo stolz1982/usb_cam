@@ -1,6 +1,6 @@
 Requirements:
 
-sudo apt-get install fswebcam git pip
+sudo apt-get install fswebcam git pyhton-pip
 
 pip install urllib2
 
