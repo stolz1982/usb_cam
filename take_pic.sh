@@ -5,6 +5,7 @@ ARCH=$(arch)
 NOW=$(date +"%YYYY%mm%dd-%H%M%S")
 FILENAME="CURRENT.jpg"
 BRIGHTNESS=20%
+GDRIVELOC="/home/administrator/usb_cam/"
 
 if [ "$EUID" -ne 0 ]
   then echo "Please run as root (with sudo)"
@@ -26,7 +27,7 @@ else
 fi
 
 fswebcam -r 1920x1080 --jpeg 50 --no-banner --quiet --save $FILENAME
-./gdrive-linux-$ARCH list --query "'$GDRIVEID' in parents" | grep $FILENAME | cut -d " " -f 1 | xargs -n1 ./gdrive-linux-$ARCH delete
-./gdrive-linux-$ARCH upload --parent $GDRIVEID $FILENAME
+$GDRIVELOC/gdrive-linux-$ARCH list --query "'$GDRIVEID' in parents" | grep $FILENAME | cut -d " " -f 1 | xargs -n1 $GDRIVELOC/gdrive-linux-$ARCH delete
+$GDRIVELOC/gdrive-linux-$ARCH upload --parent $GDRIVEID $FILENAME
   
   
