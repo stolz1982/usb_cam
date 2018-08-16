@@ -9,3 +9,9 @@ Hello Ben
 
 Command:
 fswebcam test.jpg
+
+
+
+DO NOT FORGET TO AUTHORIZE THE SENDER BY:
+
+sudo ./gdrive-linux-arm upload --parent "ID" CURRENT.jpg
