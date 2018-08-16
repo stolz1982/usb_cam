@@ -5,7 +5,7 @@ ARCH=$(arch)
 NOW=$(date +"%YYYY%mm%dd-%H%M%S")
 FILENAME="CURRENT.jpg"
 BRIGHTNESS=20%
-GDRIVELOC="/home/administrator/usb_cam/"
+GDRIVELOC="/home/administrator/usb_cam"
 
 if [ "$EUID" -ne 0 ]
   then echo "Please run as root (with sudo)"
